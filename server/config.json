@@ -1,0 +1,11 @@
+{
+  "collegeName": "Your College Name",
+  "shortName": "YCN",
+  "projectTitle": "Faculty Feedback System",
+  "tagline": "Anonymous, secure and simple faculty feedback for every class.",
+  "contactEmail": "feedback@college.edu",
+  "ratingMax": 5,
+  "ratingLabels": ["Poor", "Fair", "Good", "Very good", "Excellent"],
+  "rollNoLabel": "Roll / Register number",
+  "rollNoHint": "e.g. MCA24001"
+}

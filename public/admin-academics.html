@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Academics</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="main">
+  <div class="container">
+    <div class="page-head"><div><h1>Academics</h1><p class="muted">Departments, classes, faculty and students</p></div></div>
+    <div id="msg" role="alert" hidden></div>
+    <div id="tabs">
+      <div class="tabs" role="tablist" aria-label="Academic data">
+        <button class="tab" role="tab" id="tab-dep" aria-controls="p-dep" data-tab="dep">Departments</button>
+        <button class="tab" role="tab" id="tab-cls" aria-controls="p-cls" data-tab="cls">Classes</button>
+        <button class="tab" role="tab" id="tab-fac" aria-controls="p-fac" data-tab="fac">Faculty</button>
+        <button class="tab" role="tab" id="tab-stu" aria-controls="p-stu" data-tab="stu">Students</button>
+      </div>
+      <section id="p-dep" role="tabpanel" aria-labelledby="tab-dep"></section>
+      <section id="p-cls" role="tabpanel" aria-labelledby="tab-cls" hidden></section>
+      <section id="p-fac" role="tabpanel" aria-labelledby="tab-fac" hidden></section>
+      <section id="p-stu" role="tabpanel" aria-labelledby="tab-stu" hidden></section>
+    </div>
+  </div>
+</main>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pages/admin-academics.js"></script>
+</body>
+</html>

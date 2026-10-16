@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Take Survey</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="main">
+  <div class="container medium">
+    <a href="student-dashboard.html" class="small">&larr; Back to my surveys</a>
+    <div id="msg" role="alert" hidden></div>
+    <div id="head" style="margin-top:.75rem"></div>
+    <div id="progressWrap" hidden>
+      <div class="row spread small"><span id="progressText" aria-live="polite"></span></div>
+      <div class="progress" aria-hidden="true"><span id="progressBar" style="width:0"></span></div>
+    </div>
+    <form id="surveyForm" novalidate class="stack" style="margin-top:1rem" hidden></form>
+    <div id="thanks" class="card center" hidden>
+      <h2>Thank you!</h2>
+      <p>Your feedback was submitted anonymously.</p>
+      <a class="btn btn-primary" href="student-dashboard.html">Back to my surveys</a>
+    </div>
+  </div>
+</main>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pages/take-survey.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Anonymous faculty feedback for colleges">
+<title>Home</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <h1 id="hero-title">Honest feedback. Better teaching.</h1>
+      <p id="tagline">Anonymous, secure and simple faculty feedback for every class.</p>
+      <div class="row">
+        <a class="btn" href="login.html">Log in</a>
+        <a class="btn btn-outline" href="register.html">Student registration</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section aria-labelledby="how">
+      <h2 id="how">How it works</h2>
+      <div class="grid grid-3">
+        <article class="card"><span class="step-num" aria-hidden="true">1</span><h3>Register</h3><p>Students sign up with their roll number and choose their class.</p></article>
+        <article class="card"><span class="step-num" aria-hidden="true">2</span><h3>Rate faculty</h3><p>Open an active survey and rate each faculty on clear teaching criteria.</p></article>
+        <article class="card"><span class="step-num" aria-hidden="true">3</span><h3>Improve</h3><p>Administrators view averages, trends and comments and export reports.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="features" style="margin-top:2rem">
+      <h2 id="features">Features</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>For students</h3><ul><li>One survey per class, one submission each</li><li>Works on phones, tablets and desktops</li><li>Text size and high-contrast options</li></ul></div>
+        <div class="card"><h3>For administrators</h3><ul><li>Manage departments, classes, faculty and students</li><li>Build surveys from a reusable question bank</li><li>Faculty-wise reports with CSV export</li></ul></div>
+      </div>
+    </section>
+
+    <section id="privacy" aria-labelledby="priv" class="card" style="margin-top:2rem">
+      <h2 id="priv">Privacy and anonymity</h2>
+      <p>The system records <strong>that</strong> you submitted a survey (so nobody can submit twice) but stores your <strong>answers separately</strong>, with no link to your account. Administrators can see who is still pending, never who gave which rating.</p>
+      <p class="muted small">Passwords are stored using salted hashing and are never visible to anyone.</p>
+    </section>
+  </div>
+</main>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pages/index.js"></script>
+</body>
+</html>

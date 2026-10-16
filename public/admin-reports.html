@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reports</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="main">
+  <div class="container">
+    <div class="page-head"><div><h1>Reports</h1><p class="muted">Faculty performance and submission status</p></div></div>
+    <div id="msg" role="alert" hidden></div>
+    <div id="tabs">
+      <div class="tabs" role="tablist" aria-label="Report type">
+        <button class="tab" role="tab" id="tab-perf" aria-controls="p-perf" data-tab="perf">Faculty performance</button>
+        <button class="tab" role="tab" id="tab-sub" aria-controls="p-sub" data-tab="sub">Submission status</button>
+      </div>
+
+      <section id="p-perf" role="tabpanel" aria-labelledby="tab-perf">
+        <div class="card">
+          <div class="grid grid-3">
+            <div><label for="fSurvey">Survey</label><select id="fSurvey"></select></div>
+            <div><label for="fDept">Department</label><select id="fDept"></select></div>
+            <div class="row" style="align-items:flex-end"><button class="btn" id="exportPerf">Export CSV</button></div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:1rem"><h2>Average rating by faculty</h2><div id="perfChart" aria-live="polite"></div></div>
+        <div class="card" style="margin-top:1rem"><div class="table-wrap"><table class="stack"><caption class="sr-only">Faculty performance</caption>
+          <thead><tr><th scope="col">Faculty</th><th scope="col">Subject</th><th scope="col">Responses</th><th scope="col">Average</th><th scope="col">Rating</th><th scope="col"><span class="sr-only">Details</span></th></tr></thead>
+          <tbody id="perfRows"></tbody></table></div></div>
+        <section id="detail" class="card" style="margin-top:1rem" hidden tabindex="-1" aria-labelledby="dt"></section>
+      </section>
+
+      <section id="p-sub" role="tabpanel" aria-labelledby="tab-sub" hidden>
+        <div class="card">
+          <div class="row spread"><div style="flex:1;min-width:220px"><label for="sSurvey">Survey</label><select id="sSurvey"></select></div>
+          <button class="btn" id="exportSub">Export CSV</button></div>
+          <p class="muted small">Shows who has submitted. It never shows what anyone answered.</p>
+        </div>
+        <div class="card" style="margin-top:1rem"><p id="subSummary" class="small" aria-live="polite"></p><div class="table-wrap"><table class="stack"><caption class="sr-only">Submission status</caption>
+          <thead><tr><th scope="col">Roll no.</th><th scope="col">Name</th><th scope="col">Status</th></tr></thead><tbody id="subRows"></tbody></table></div></div>
+      </section>
+    </div>
+  </div>
+</main>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pages/admin-reports.js"></script>
+</body>
+</html>

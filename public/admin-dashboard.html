@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="main">
+  <div class="container">
+    <div class="page-head"><div><h1>Dashboard</h1><p class="muted">Overview of feedback activity</p></div>
+      <a class="btn btn-primary" href="admin-surveys.html">Create survey</a></div>
+    <div id="msg" role="alert" hidden></div>
+    <div class="grid grid-4" id="stats" aria-label="Key numbers"></div>
+    <section class="card" aria-labelledby="t2" style="margin-top:1rem"><h2 id="t2">Recent surveys</h2>
+      <div class="table-wrap"><table class="stack"><thead><tr><th scope="col">Survey</th><th scope="col">Class</th><th scope="col">Responses</th></tr></thead><tbody id="recent"></tbody></table></div>
+    </section>
+    <section class="card" aria-labelledby="submissionStatusTitle" style="margin-top:1rem">
+      <h2 id="submissionStatusTitle">Submission status</h2>
+      <p id="notSubmittedCount">Registered but not submitted: <span>Loading...</span></p>
+      <div class="table-wrap"><table class="stack"><thead><tr><th scope="col">Roll number</th><th scope="col">Department</th></tr></thead><tbody id="submittedRows"></tbody></table></div>
+    </section>
+  </div>
+</main>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pages/admin-dashboard.js"></script>
+</body>
+</html>
